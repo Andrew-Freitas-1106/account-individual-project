@@ -2,25 +2,28 @@ package com.qa.account.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Account {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	Long id;
-	String firstName;		//
-	String lastName;		//main info
-	String accountNumber;	//
-	String address;
-	String email;
-	Integer age;
+	@GeneratedValue //(strategy = GenerationType.AUTO)
+	public Long id;
+	public String firstName;
+	public String lastName;
+	public String accountNumber;
+	public String address;
+	public String email;
+	public String age;
 	
 
-	public Account() { }
+	public Account() {
+		super();			//super() keeps jpa happy
+	}
 
-	public Account(Long id, String firstName, String lastName, String accountNumber, String address, String email, Integer age) {
+	public Account(Long id, String firstName, String lastName, String accountNumber, String address, String email, String age) {
+		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -78,11 +81,11 @@ public class Account {
 		this.email = email;
 	}
 
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 

@@ -12,13 +12,13 @@ public class AccountStub {
 	private static Long idIndex = 3L;
 
 	static {
-		Account a = new Account(1L, "Andrew", "Freitas", "A001", "123 Sunshine Road", "afreitas@qa.com", 22);
+		Account a = new Account(1L, "Andrew", "Freitas", "A001", "123 Sunshine Road", "afreitas@qa.com", "22");
 		accounts.put(1L, a);
-		Account b = new Account(2L, "Nathan", "Athens","T246", "666 Gloomy Road", "nathens@qa.com", 18);
+		Account b = new Account(2L, "Nathan", "Athens","T246", "666 Gloomy Road", "nathens@qa.com", "18");
 		accounts.put(2L, b);
-		Account c = new Account(3L, "Michael", "Massey","D032", "212 Cheerful Street", "mmassey@qa.com", 24);
+		Account c = new Account(3L, "Michael", "Massey","D032", "212 Cheerful Street", "mmassey@qa.com", "24");
 		accounts.put(3L, c);
-		Account d = new Account(4L, "Brigitte", "Roth","D122", "101 Kingston High Street", "broth@qa.com", 25);
+		Account d = new Account(4L, "Brigitte", "Roth","D122", "101 Kingston High Street", "broth@qa.com", "25");
 		accounts.put(4L, d);
 	}
 
