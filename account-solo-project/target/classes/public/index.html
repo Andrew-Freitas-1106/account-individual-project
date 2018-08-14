@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>lol</title>
+  <title>Account WebApp</title>
   <style>
    
 #app {
@@ -48,42 +48,47 @@
 <body>
   <div id="app">
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Dashboard')">Dashboard</button>
-  <button class="tablinks" onclick="openCity(event, 'Accounts')">Accounts</button>
-  <button class="tablinks" onclick="openCity(event, 'CreateAccount')">Create Account</button>
+  <button class="tablinks" onclick="pageView(event, 'Dashboard')">Dashboard</button>
+  <button class="tablinks" onclick="pageView(event, 'Accounts')">Accounts</button>
+  <button class="tablinks" onclick="pageView(event, 'CreateAccount')">Create Account</button>
 </div>
 
 <!-- Tab content -->
 <div id="Dashboard" class="tabcontent">
-  <h3>London</h3>
-  {{info}}
-
+  <h3></h3>
   {{ message }}
 
-  {{fat}}
-  <p>London is the capital city of England.</p>
+    {{info}}
+
+  {{info2}}
+  <p></p>
 </div>
 
 <div id="Accounts" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h3></h3>
+  <p></p>
 </div>
 
 <div id="CreateAccount" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <h3></h3>
+  <p></p>
 </div>
 </div>
+
+<!--Vue and Axios source code ran-->
 <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
 <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+
+
+<!-- Was going to link backend data using Axios via a script -->
 <script src="lib/view.js"></script>
 <script>
 var app = new Vue({
      el: '#app',
      data: {
     message: 'Hello Vue!',
-    info: "Andy wandy",
-    fat: "is a fatty watty"
+    info: "hello",
+    info2: "world"
   }
 });
 </script>
